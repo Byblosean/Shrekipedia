@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('Background.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 20% 50% 30%;
+            grid-template-rows: 20% 55% 5% 20%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .item1 {
+            font-size: 50px;
+            font-style: italic;
+            grid-row: 1/1;
+            grid-column: 1/4;
+        }
+
+        .item2 {
+            grid-row: 2/5;
+            grid-column: 1/2;
+        }
+        .item3 {
+    display: block; /* Переконайтесь, що немає display: flex */
+    text-align: left; /* Вирівнювання тексту */
+}
+
+.item3 h2 {
+    font-size: 28px;
+    margin-bottom: 10px; /* Додати відступ знизу */
+    text-align: center; /* Вирівнювання заголовка по центру */
+    font-weight: bold;
+}
+
+        
+
+        .item4 {
+            grid-row: 2/4;
+            grid-column: 3/4;
+        }
+
+        .item6 {
+            grid-row: 4/5;
+            grid-column: 2/4;
+        }
+
+        .x {
+            
+            position: absolute; /* для позиционирования внутри item1 */
+            right: 10px; /* привязка к правой стороне */
+            width: 300px; /* ширина прямоугольника */
+            height: 100px; /* высота прямоугольника */
+            margin: 10px;
+            border: 0px solid black;
+            background-color: rgba(0, 254, 140, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-style:normal;
+        }
+        .y {
+            position: absolute; /* для позиционирования внутри item1 */
+            right: 10px; /* привязка к правой стороне */
+            width: 200px; /* ширина прямоугольника */
+            height: 60px; /* высота прямоугольника */
+            margin: 10px;
+            border: 1px solid black;
+            background-color: rgb(0, 254, 140);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        .listOfLinks{
+            display: flex;
+            list-style-type: none;
+        }
+
+        .linkedItem a{
+            text-decoration: none;
+            color: inherit;
+            margin: 10px;
+            border: 2px solid black;
+            padding: 10px;
+            background-color: white;
+        }
+        .linkedItem a:hover{
+        background-color: rgba(255, 255, 255, 0.26);
+ 
+        }
+        .link1 a{
+            pointer-events: none;
+            opacity: 40%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="item item1">
+        Що таке кохання?
+        <div class="x"> 
+            <img src="Shrek.png" 
+            height="100%"
+            width="100%" >
+        </div> <!-- элемент x привязан к правому краю -->
+    </div>
+    
+    <div class="item item2">
+        <ul>
+            Чому Шрек?
+            <li> Шрек показує, що любов може бути безумовною та відданою. </li>
+            <li>Він не боїться йти на ризик заради тих, кого любить.</li>
+            <li>Бо Шрек</li>
+        </ul>
+    </div>
+    <div class="item item3">
+        <h2>Чому Шрек є символом кохання?</h2>
+        Шрек є символом кохання з кількох причин. По-перше, він демонструє безумовну відданість та лояльність. Його готовність йти на ризик заради тих, кого він любить, свідчить про глибокі почуття, навіть якщо це виходить за межі його зони комфорту.
+
+        По-друге, Шрек вчить нас, що справжня краса полягає не в зовнішньому вигляді, а у внутрішніх якостях, таких як доброта, сміливість і вміння проявляти емоції. Його мандрівка показує, як важливо вірити у власну цінність, незалежно від того, як на тебе дивляться інші.
+        
+        Нарешті, Шрек наголошує на важливості прийняття себе. Він проходить через боротьбу зі своєю ідентичністю, але врешті-решт приймає свою природу. Це є важливим етапом у пошуку справжнього кохання, як до себе, так і до інших. Таким чином, Шрек стає символом кохання, що виходить за межі стереотипів і демонструє, як справжні почуття можуть змінити життя.</div>
+    <div class="item item4">
+        
+        
+        <img src="image.jpg" 
+        height="100%"
+        width="100%" 
+        alt="Опис зображення">
+        
+    </div>
+    <div class="item">Це ніколи не Шрекінчится</div>
+    <div class="item item6">
+        <ul class="listOfLinks">
+            <li class="linkedItem link1"><a href="page1.html">Сторінка 1</a></li>
+            <li class="linkedItem"><a href="page2.html">Сторінка 2</a></li>
+            <li class="linkedItem"><a href="page3.html">Сторінка 3</a></li>
+            <li class="linkedItem"><a href="page4.html">Сторінка 4</a></li>
+            <li class="linkedItem"><a href="page5.html">Сторінка 5</a></li>
+        </ul>
+        <div class="y">Це кохання!!!</div>
+    </div>
+</div>
+
+</body>
+</html>
