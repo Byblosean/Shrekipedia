@@ -4,166 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
-    <style>
-        body {
-            margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('Background.png');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: 20% 50% 30%;
-            grid-template-rows: 20% 55% 5% 20%;
-            width: 100%;
-            height: 100%;
-        }
-
-        .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #000;
-            font-size: 20px;
-            position: relative;
-        }
-
-        .item1 {
-            font-size: 50px;
-            font-style: italic;
-            grid-row: 1/1;
-            grid-column: 1/4;
-        }
-
-        .item2 {
-            grid-row: 2/5;
-            grid-column: 1/2;
-        }
-        .item3 {
-    display: block; /* Переконайтесь, що немає display: flex */
-    text-align: left; /* Вирівнювання тексту */
-}
-
-.item3 h2 {
-    font-size: 28px;
-    margin-bottom: 10px; /* Додати відступ знизу */
-    text-align: center; /* Вирівнювання заголовка по центру */
-    font-weight: bold;
-}
-
-        
-
-        .item4 {
-            grid-row: 2/4;
-            grid-column: 3/4;
-        }
-
-        .item6 {
-            grid-row: 4/5;
-            grid-column: 2/4;
-        }
-
-        .x {
-            
-            position: absolute; /* для позиционирования внутри item1 */
-            right: 10px; /* привязка к правой стороне */
-            width: 300px; /* ширина прямоугольника */
-            height: 100px; /* высота прямоугольника */
-            margin: 10px;
-            border: 0px solid black;
-            background-color: rgba(0, 254, 140, 0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            font-style:normal;
-        }
-        .y {
-            position: absolute; /* для позиционирования внутри item1 */
-            right: 10px; /* привязка к правой стороне */
-            width: 200px; /* ширина прямоугольника */
-            height: 60px; /* высота прямоугольника */
-            margin: 10px;
-            border: 1px solid black;
-            background-color: rgb(0, 254, 140);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-        }
-
-        .listOfLinks{
-            display: flex;
-            list-style-type: none;
-        }
-
-        .linkedItem a{
-            text-decoration: none;
-            color: inherit;
-            margin: 10px;
-            border: 2px solid black;
-            padding: 10px;
-            background-color: white;
-        }
-        .linkedItem a:hover{
-            background-color: rgba(255, 255, 255, 0.26);
-        }
-
-        .link2 a{
-            pointer-events: none;
-            opacity: 40%;
-        }
-        .full-screen-video{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-        }
-    </style>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-
 <div class="container">
     <div class="item item1">
         Історія успіху осла
         <div class="x"> 
-            <img src="Shrek.png" 
-            height="100%"
-            width="100%" >
-        </div> <!-- элемент x привязан к правому краю -->
+            <img src="Shrek.png" height="100%" width="100%">
+        </div>
     </div>
-    
     <div class="item item2">
         <ul>
             Чому Осел?
-            <li> Осел — єдиний, хто не боїться Шрека: З самого початку Осел не злякався вигляду чи рику Шрека, хоча всі інші персонажі бояться. Він відразу став наполегливо намагатися подружитися з ним. Це свідчить про його сміливість та доброзичливий характер.</li>
-            <li>Магічні здібності Осла: У другій частині "Шрека" Осел тимчасово перетворюється на білого коня після вживання чарівного зілля. Це був несподіваний поворот для глядачів, а також послужив джерелом гумору, оскільки Осел був у захваті від своєї нової форми.</li>
+            <li>Осел — єдиний, хто не боїться Шрека.</li>
+            <li>Магічні здібності Осла: у другій частині...</li>
             <li>Бо Шрек</li>
         </ul>
     </div>
     <div class="item item3">
         <video class="full-screen-video" autoplay loop id="background-video">
             <source src="videoplayback (6).mp4" type="video/mp4">
-            
         </video>
-        </div>
-
-        <div class="item item4">
-        
-        
-            <img src="Donkey.jpg" 
-            height="100%"
-            width="100%" 
-            alt="Опис зображення">
-            
-        </div>
+    </div>
+    <div class="item item4">
+        <img src="Donkey.jpg" height="100%" width="100%" alt="Опис зображення">
+    </div>
     <div class="item">Це ніколи не Шрекінчится</div>
     <div class="item item6">
         <ul class="listOfLinks">
@@ -176,17 +42,11 @@
         <div class="y">Це кохання!!!</div>
     </div>
 </div>
-
-</body>
 <script>
-    
     document.addEventListener('DOMContentLoaded', function() {
-      
         var video = document.getElementById('background-video');
-    
-       
         video.play();
     });
-    
-        </script>
+</script>
+</body>
 </html>
