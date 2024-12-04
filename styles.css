@@ -69,7 +69,7 @@ body {
     border-top: 2px solid black; 
     font-size: 20px;
     flex-shrink: 0; 
-    height: 50%;
+    height: 10%;
 }
 
 .item4 {
@@ -82,8 +82,9 @@ body {
 
 
 .item6 {
-    width: 100%;
-    height: auto;
+    width: 150%;
+    padding-left: 30%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +101,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 10px;
     margin: 0;
     font-size: 20px; /* Зменшіть шрифт, якщо він занадто великий */
     box-sizing: border-box;
