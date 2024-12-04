@@ -23,7 +23,6 @@ body {
     height: 20%;
     line-height: 1.5;
     border-bottom: 2px solid black;
-    position: relative;
 }
 
 .x {
@@ -69,7 +68,7 @@ body {
     text-align: center;
     border-top: 2px solid black; 
     font-size: 20px;
-    flex-shrink: 0; /* Забороняємо зменшення цих елементів */
+    flex-shrink: 0; 
 }
 
 .item4 {
@@ -83,20 +82,20 @@ body {
 
 .item6 {
     width: 100%;
-    height: auto; /* Автоматична висота, щоб враховувати вміст */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: auto; /* Виштовхує вниз за допомогою Flexbox */
+    margin-top: auto; 
     box-sizing: border-box;
-    overflow: hidden; /* Обрізає вміст, якщо він виходить за межі */
+    overflow: hidden; 
 }
 
 
 
 ї.y {
-    max-width: 100%; /* Обмежує ширину блоку Y */
-    max-height: 100%; /* Обмежує висоту блоку Y */
+    max-width: 100%;
+    max-height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
