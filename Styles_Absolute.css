@@ -60,7 +60,7 @@ body {
     box-sizing: border-box;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    padding-bottom: 40px; /* Отступ снизу */
+    padding-bottom: 40px;
 }
 .item3 h2 {
     margin-bottom: 15px;
@@ -116,13 +116,24 @@ body {
     font-size: 30px;
 }
 
-.listOfLinks button {
-    display: inline-block;
-    margin: 10px;
-    gap: 10px;
-    list-style-type: none;
-    padding: 0;
+
+.listOfLinks a {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .listOfLinks::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .listOfLinks li {
+    float: left;
+    margin-right: 10px;
+    list-style: none;
 }
+
 
 .linkedItem a {
     text-decoration: none;
