@@ -1,7 +1,7 @@
 body {
     margin: 0;
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-image: url('Background.png');
     background-size: cover;
     background-position: center;
@@ -69,6 +69,7 @@ body {
     text-align: center;
     border-top: 2px solid black; 
     font-size: 20px;
+    flex-shrink: 0; /* Забороняємо зменшення цих елементів */
 }
 
 .item4 {
@@ -79,25 +80,31 @@ body {
     align-items: center;
 }
 
+
 .item6 {
-    width: 80%;
-    height: 20%;
+    width: 100%;
+    height: auto; /* Автоматична висота, щоб враховувати вміст */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    margin-top: auto; /* Виштовхує вниз за допомогою Flexbox */
+    box-sizing: border-box;
+    overflow: hidden; /* Обрізає вміст, якщо він виходить за межі */
 }
 
 
-.y {
-    width: 200px;
-    height: 60px;
+
+ї.y {
+    max-width: 100%; /* Обмежує ширину блоку Y */
+    max-height: 100%; /* Обмежує висоту блоку Y */
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(0, 254, 140);
-    font-size: 30px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 20px; /* Зменшіть шрифт, якщо він занадто великий */
+    box-sizing: border-box;
+    background-color: rgb(0, 254, 140); /* Перевірка видимості */
 }
 
 .listOfLinks {

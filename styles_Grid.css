@@ -1,8 +1,7 @@
 body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center; /* Центрування через грід */
     height: 100vh;
     overflow: hidden;
     background-image: url('Background.png');
@@ -22,10 +21,10 @@ body {
 }
 
 .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center; /* Центрування тексту через грід */
     border: 1px solid black;
+    display: grid;
+    place-items: center;
 }
 
 .item1 {
@@ -42,11 +41,10 @@ body {
     top: 20px;
     width: 300px;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(0, 254, 140, 0);
     font-size: 50px;
+    display: grid;
+    place-items: center;
 }
 
 .item2 {
@@ -57,11 +55,8 @@ body {
 .item3 {
     grid-column: 2;
     grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
     padding: 10px;
+    text-align: left;
     box-sizing: border-box;
 }
 
@@ -75,18 +70,16 @@ body {
 .item4 {
     grid-column: 3;
     grid-row: 2 / 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center; /* Центрування зображення */
+    max-height: 100%; /* Обмеження висоти блоку */
+    overflow: hidden; /* Уникнення виходу зображення за межі */
 }
+
 
 .item6 {
     grid-column: 2 / 4;
     grid-row: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .y {
@@ -95,17 +88,18 @@ body {
     bottom: 20px;
     width: 200px;
     height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(0, 254, 140);
     font-size: 30px;
+    display: grid;
+    place-items: center;
 }
 
 .listOfLinks {
-    display: flex;
-    list-style-type: none;
+    display: grid;
+    grid-auto-flow: column; /* Вирівнювання у ряд через грід */
     gap: 10px;
+    list-style-type: none;
+    justify-content: center;
 }
 
 .linkedItem a {
@@ -114,6 +108,8 @@ body {
     border: 2px solid black;
     padding: 10px;
     background-color: white;
+    display: grid;
+    place-items: center;
 }
 
 .linkedItem a:hover {
