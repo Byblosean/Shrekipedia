@@ -23,18 +23,25 @@ body {
     height: 20%;
     line-height: 1.5;
     border-bottom: 2px solid black;
+    display: flex; 
+    padding-left: 500px;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
 }
 
 .x {
+    max-width: 30%;
+    max-height: 30%;
     display: flex;
-    justify-content: flex-end; 
-    align-items: flex-start;
-    width: 300px;
-    height: 100px;
-    background-color: rgba(0, 254, 140, 0);
-    font-size: 50px;
-    padding: 20px; 
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    padding: 20px;
+    font-size: 20px;
+    box-sizing: border-box;
 }
+
 
 
 .item2 {
