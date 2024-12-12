@@ -1,9 +1,13 @@
 body {
     margin: 0;
+<<<<<<< Updated upstream
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+=======
+    height: 100%;
+>>>>>>> Stashed changes
     overflow: hidden;
     background-image: url('Background.png');
     background-size: cover;
@@ -52,8 +56,18 @@ body {
 }
 
 .item2 {
+<<<<<<< Updated upstream
     grid-column: 1;
     grid-row: 2 / 5;
+=======
+    width: 20%;
+    height: 60%;
+    padding: 10px;      
+    box-sizing: border-box;
+    border-right: 2px solid black;
+
+
+>>>>>>> Stashed changes
 }
 
 .item3 {
@@ -83,6 +97,7 @@ body {
 }
 
 .item6 {
+<<<<<<< Updated upstream
     grid-column: 2 / 4;
     grid-row: 4;
     display: flex;
@@ -97,6 +112,18 @@ body {
     bottom: 20px;
     width: 200px;
     height: 60px;
+=======
+    margin-left: 20%;
+    display: flex;
+    border-left: 2px solid black; 
+}
+
+
+
+.y {
+    max-width: 100%;
+    max-height: 100%; /* Обмежує висоту блоку Y */
+>>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
