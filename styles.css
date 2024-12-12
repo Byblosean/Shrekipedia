@@ -1,6 +1,9 @@
 body {
     margin: 0;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     overflow: hidden;
     background-image: url('Background.png');
     background-size: cover;
@@ -9,57 +12,59 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 20% 55% 5% 20%;
     width: 100%;
+    height: 100%;
+    gap: 0px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 20px;
 }
 
 .item1 {
     font-size: 50px;
     font-style: italic;
-    text-align: center;
-    width: 100%;
-    height: 20%;
-    line-height: 1.5;
-    border-bottom: 2px solid black;
-    display: flex; 
-    padding-left: 500px;
-    justify-content: center; 
-    align-items: center; 
-    gap: 20px; 
+    grid-column: 1 / 4;
+    grid-row: 1;
+    position: relative;
 }
 
 .x {
-    max-width: 30%;
-    max-height: 30%;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 300px;
+    height: 100px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-left: 200px;
-    padding: 20px;
-    font-size: 20px;
-    box-sizing: border-box;
+    align-items: center;
+    background-color: rgba(0, 254, 140, 0);
+    font-size: 50px;
 }
 
-
-
 .item2 {
-    width: 20%;
-    height: 80%;
-    padding: 10px;
-    box-sizing: border-box;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
+    grid-column: 1;
+    grid-row: 2 / 5;
 }
 
 .item3 {
-    width: 50%;
-    height: 60%;
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
     box-sizing: border-box;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-
+    position: relative; 
 }
 
 .item3 h2 {
@@ -69,58 +74,40 @@ body {
     font-size: 28px;
 }
 
-.item5 {
-    text-align: center;
-    padding-top: 100px;
-    border-top: 2px solid black; 
-    font-size: 20px;
-    flex-shrink: 0; 
-    height: 10%;
-}
-
 .item4 {
-    width: 30%;
-    height: 60%;
+    grid-column: 3;
+    grid-row: 2 / 4;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .item6 {
-    width: 150%;
-    padding-left: 30%;
-    height: 60%;
+    grid-column: 2 / 4;
+    grid-row: 4;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: auto; 
-    box-sizing: border-box;
-    overflow: hidden; 
 }
 
-
-
 .y {
-    max-width: 100%;
-    max-height: 100%; 
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    width: 200px;
+    height: 60px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 10px;
-    margin: 0;
-    font-size: 20px; 
-    box-sizing: border-box;
-    background-color: rgb(0, 254, 140); 
+    align-items: center;
+    background-color: rgb(0, 254, 140);
+    font-size: 30px;
 }
 
 .listOfLinks {
     display: flex;
-    justify-content: center;
-    gap: 10px;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    gap: 10px;
 }
 
 .linkedItem a {
@@ -129,8 +116,6 @@ body {
     border: 2px solid black;
     padding: 10px;
     background-color: white;
-    display: inline-block;
-    margin: 5px;
 }
 
 .linkedItem a:hover {
@@ -140,4 +125,16 @@ body {
 .link1 a {
     pointer-events: none;
     opacity: 40%;
+}
+
+
+
+.full-screen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1; 
 }

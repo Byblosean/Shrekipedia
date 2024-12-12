@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Що таке кохання?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            table-layout: fixed;
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 0;
+            border: 2px solid #000; 
+        }
+
+        .item1 {
+            font-size: 50px;
+            font-style: italic;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+            border-bottom: 2px solid #000;
+        }
+
+        .item1 .x {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        .item2 {
+            width: 30%;
+            height: 100vh;
+            vertical-align: top;
+            padding: 20px;
+        }
+
+        .item3 {
+            width: 40%;
+            vertical-align: top;
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .item3 h2 {
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 28px;
+            color: #000;
+        }
+
+        .item4 {
+            width: 30%;
+            text-align: center;
+        }
+
+        .item4 img {
+            width: 100%;
+            height: auto;
+        }
+
+        .item5 {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #000;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: auto; /* Використовуємо auto, щоб він знаходився внизу */
+        }
+
+        .item6 {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .listOfLinks {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            gap: 10px;
+        }
+
+        .linkedItem a {
+            text-decoration: none;
+            color: inherit;
+            background-color: #fff;
+            border: 2px solid #000;
+            padding: 10px;
+        }
+
+        .linkedItem a:hover {
+            background-color: rgba(255, 255, 255, 0.26);
+        }
+
+        .link1 a {
+            pointer-events: none;
+            opacity: 40%;
+        }
+
+        .y {
+            width: 200px;
+            height: 60px;
+            display: flex;
+            background-color: rgb(127, 255, 131);
+            border: 2px solid #000;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table role="presentation">
+        <tr>
+            <td colspan="3" class="item1">
+                <span>Що таке кохання?</span>
+                <div class="x">
+                    <img src="Shrek.png" alt="Shrek Image" height="100%" width="100%">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="item2">
+                <h2>Чому Шрек?</h2>
+                <ul>
+                    <li>Шрек показує, що любов може бути безумовною та відданою.</li>
+                    <li>Він не боїться йти на ризик заради тих, кого він любить.</li>
+                    <li>Бо Шрек</li>
+                </ul>
+            </td>
+            <td class="item3">
+                <h2>Чому Шрек є символом кохання?</h2>
+                <p>
+                    Шрек є символом кохання з кількох причин. По-перше, він демонструє безумовну відданість та лояльність...
+                </p>
+                <div class="item5">Це ніколи не Шрекінчится</div>
+            </td>
+            <td class="item4">
+                <img src="image.jpg" alt="Опис зображення" height="100%" width="100%">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="item6">
+                <ul class="listOfLinks">
+                    <li class="linkedItem link1"><a href="index.html">Сторінка 1</a></li>
+                    <li class="linkedItem"><a href="Page2.html">Сторінка 2</a></li>
+                    <li class="linkedItem"><a href="Page3.html">Сторінка 3</a></li>
+                    <li class="linkedItem"><a href="Page4.html">Сторінка 4</a></li>
+                    <li class="linkedItem"><a href="Page5.html">Сторінка 5</a></li>
+                    <li class="linkedItem Email"><a href="Page5.html">Shrekmail</a></li>
+                </ul>
+                <div class="y">Це кохання!!!</div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
