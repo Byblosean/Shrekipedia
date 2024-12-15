@@ -166,6 +166,7 @@ body {
         grid-template-rows: auto;
         gap: 0px; /* Убираем промежутки между блоками */
         overflow-y: auto; /* Включаем вертикальный скроллинг */
+        overflow-x:hidden;
         height: 100vh; /* Устанавливаем высоту контейнера на 100% от экрана */
         padding: 0; /* Убираем отступы */
     }
@@ -222,14 +223,35 @@ body {
     }
 
     .listOfLinks {
-        flex-direction: row;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap; /* Элементы могут переноситься на новую строку */
+        justify-content: space-between; /* Распределение элементов с равными промежутками */
+        gap: 10px; /* Промежутки между элементами */
         margin-top: 20px;
     }
 
+    .linkedItem {
+        flex: 1 1 calc(20% - 10px); /* Каждый элемент будет занимать 20% от ширины контейнера, с учетом промежутков */
+        box-sizing: border-box; /* Учитываем padding и margin в размере */
+        text-align: center;
+    }
+
     .linkedItem a {
-        padding: 1px;
-        font-size: 10px;
+        padding: 5px;
+        font-size: 10px; /* Уменьшаем шрифт для мобильных устройств */
+        display: block; /* Чтобы ссылка занимала всю ширину родителя */
+    }
+
+    /* Для элемента Email */
+    .linkedItem.Email {
+        flex: 1 1 100%; /* Этот элемент занимает всю ширину контейнера */
+        max-width: 100%; /* Ограничение ширины элемента */
+        text-align: center;
+        margin-top: 10px; /* Отступ сверху для разделения */
+    }
+
+    .linkedItem.Email a {
+        font-size: 12px; /* Размер шрифта для Email */
     }
 
 }
