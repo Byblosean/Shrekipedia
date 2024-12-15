@@ -215,11 +215,16 @@ body {
     .y {
         width: 20%;
         height: 2%;
-        background-color: rgb(0, 254, 140);
+        color:rgba(0, 0, 0, 0.704);
+        background-color: rgba(0, 254, 140, 0.364);
         font-size: 12px;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: fixed; /* Фиксированное положение */
+        bottom: 0;
+        right: 0; /* Сдвигаем в правый нижний угол */
+        margin: 10px; /* Дополнительные отступы, если нужно */
     }
 
     .listOfLinks {
